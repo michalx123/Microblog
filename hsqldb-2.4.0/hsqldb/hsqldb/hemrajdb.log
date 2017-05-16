@@ -1,0 +1,62 @@
+/*C2*/SET SCHEMA PUBLIC
+drop table uzytkownik if exists
+create table uzytkownik (\u000aid_uzytkownika int GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000aimie varchar(45),\u000anazwisko varchar(45),\u000aPRIMARY KEY (id_uzytkownika)\u000a)
+drop table follower if exists
+create table follower (\u000aid_followera INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000aimie varchar(45),\u000anazwisko varchar(45),\u000aPRIMARY KEY (id_followera)\u000a)
+drop table wpis if exists
+create table wpis (\u000aid_wpisu INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000atekst varchar(250),\u000aPRIMARY KEY (id_wpisu)\u000a)
+INSERT INTO UZYTKOWNIK VALUES(1,'Jozef','Malinka')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(2,'Andrzej','Slodki')
+COMMIT
+INSERT INTO FOLLOWER VALUES(1,'Waldemar','Kiepski')
+COMMIT
+INSERT INTO FOLLOWER VALUES(2,'Marian','Pazdzioch')
+COMMIT
+INSERT INTO WPIS VALUES(1,'Testowy wpis na tablicy')
+COMMIT
+INSERT INTO WPIS VALUES(2,'Czesc i czolem!')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(3,'Jozef','Malinka')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(4,'Andrzej','Slodki')
+COMMIT
+INSERT INTO FOLLOWER VALUES(3,'Waldemar','Kiepski')
+COMMIT
+INSERT INTO FOLLOWER VALUES(4,'Marian','Pazdzioch')
+COMMIT
+INSERT INTO WPIS VALUES(3,'Testowy wpis na tablicy')
+COMMIT
+INSERT INTO WPIS VALUES(4,'Czesc i czolem!')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(5,'Jozef','Malinka')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(6,'Andrzej','Slodki')
+COMMIT
+INSERT INTO FOLLOWER VALUES(5,'Waldemar','Kiepski')
+COMMIT
+INSERT INTO FOLLOWER VALUES(6,'Marian','Pazdzioch')
+COMMIT
+INSERT INTO WPIS VALUES(5,'Testowy wpis na tablicy')
+COMMIT
+INSERT INTO WPIS VALUES(6,'Czesc i czolem!')
+COMMIT
+drop table uzytkownik if exists
+create table uzytkownik (\u000aid_uzytkownika int GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000aimie varchar(45),\u000anazwisko varchar(45),\u000aPRIMARY KEY (id_uzytkownika)\u000a)
+drop table follower if exists
+create table follower (\u000aid_followera INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000aimie varchar(45),\u000anazwisko varchar(45),\u000aPRIMARY KEY (id_followera)\u000a)
+drop table wpis if exists
+create table wpis (\u000aid_wpisu INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),\u000atekst varchar(250),\u000aPRIMARY KEY (id_wpisu)\u000a)
+INSERT INTO UZYTKOWNIK VALUES(1,'Jozef','Malinka')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES(2,'Andrzej','Slodki')
+COMMIT
+INSERT INTO FOLLOWER VALUES(1,'Waldemar','Kiepski')
+COMMIT
+INSERT INTO FOLLOWER VALUES(2,'Marian','Pazdzioch')
+COMMIT
+INSERT INTO WPIS VALUES(1,'Testowy wpis na tablicy')
+COMMIT
+INSERT INTO WPIS VALUES(2,'Czesc i czolem!')
+COMMIT
+DISCONNECT
