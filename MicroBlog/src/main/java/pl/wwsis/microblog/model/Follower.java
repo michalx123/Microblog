@@ -14,6 +14,12 @@ public class Follower {
 	 @Id   
 	 private int idFollowera;
 	 
+	 @Column (name= "imie" , nullable= false )  
+	 private String imie;
+		 
+	 @Column (name= "nazwisko" , nullable= false )  
+	 private String nazwisko;
+	 
 	 public int getIdFollowera() {
 		return idFollowera;
 	}
@@ -38,10 +44,6 @@ public class Follower {
 		this.nazwisko = nazwisko;
 	}
 
-	@Column (name= "imie" , nullable= false )  
-	 private String imie;
-	 
-	 @Column (name= "nazwisko" , nullable= false )  
-	 private String nazwisko;
+
 	 
 }

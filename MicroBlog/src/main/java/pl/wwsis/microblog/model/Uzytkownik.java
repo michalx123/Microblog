@@ -12,6 +12,9 @@ public class Uzytkownik {
 	 @Id 
 	 private int idUzytkownika;
 	 
+	 @Column (name= "nazwisko" , nullable= false )  
+	 private String nazwisko;
+	 
 	 public int getIdUzytkownika() {
 		return idUzytkownika;
 	}
@@ -39,8 +42,7 @@ public class Uzytkownik {
 	@Column (name= "imie" , nullable= false )  
 	 private String imie;
 	 
-	@Column (name= "nazwisko" , nullable= false )  
-	 private String nazwisko;
+
 	
 	
 	
