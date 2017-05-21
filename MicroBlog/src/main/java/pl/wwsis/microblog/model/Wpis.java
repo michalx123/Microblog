@@ -11,6 +11,10 @@ public class Wpis {
 	
 	 @Id 
 	 private int idWpisu;
+	 
+	 @Column (name= "tekst" , nullable= false )  
+	 private String tekst;
+		
 	
 	 public int getIdWpisu() {
 		return idWpisu;
@@ -28,7 +32,6 @@ public class Wpis {
 		this.tekst = tekst;
 	}
 
-	@Column (name= "tekst" , nullable= false )  
-	 private String tekst;
+
 
 }
