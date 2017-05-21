@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<beans xmlns= "http://www.springframework.org/schema/beans"
-xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" 
-xmlns:mvc= "http://www.springframework.org/schema/mvc"
-xmlns:context= "http://www.springframework.org/schema/context" 
-xsi:schemaLocation= "
-http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd" >
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:mvc="http://www.springframework.org/schema/mvc"
+      xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+      xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
  <context:component-scan base-package= "pl.microblog" />  <!-- Chcemy automatycznie obsługiwać wszystkie klasy z adnotacjami w tym pakiecie. UWAGA!!! każdy projekt może mieć oczyœiscie inna strukture pakietów -->
  <context:annotation-config />  <!-- To na przyszłość, pozwoli nam korzystać z adnotacji także w klasach, które byśmy skonfigurowali ręcznie -->
-
+ 
 <bean id= "dataSource" class = "org.springframework.jdbc.datasource.DriverManagerDataSource" >
 <property name= "driverClassName"  value = "org.hsqldb.jdbcDriver" /> <property name= "url"  value = "jdbc:hsqldb:hsql://localhost/testdb" /> <property name= "username"  value = "admin" />
 <property name= "password"  value = "admin" />
 </bean>
-
-
+ 
+ 
 <tx:annotation-driven />
 <bean id= "entityManagerFactory"
 class= "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >  <property name= "dataSource" ref= "dataSource" />
@@ -26,9 +25,8 @@ class= "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >  <
  <prop key= "hibernate.hbm2ddl.auto" > update </prop>  </props>
  </property> </bean>
 <bean class= "org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" /> <bean class= "org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-<beanid= "transactionManager" class= "org.springframework.orm.jpa.JpaTransactionManager"  >
+<bean id= "transactionManager" class= "org.springframework.orm.jpa.JpaTransactionManager"  >
  <property name= "entityManagerFactory" ref= "entityManagerFactory" /> </bean>
-
-
+ 
+ 
 </beans>
-
