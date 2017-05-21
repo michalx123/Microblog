@@ -15,6 +15,9 @@ public class Uzytkownik {
 	 @Column (name= "nazwisko" , nullable= false )  
 	 private String nazwisko;
 	 
+	 @Column (name= "imie" , nullable= false )  
+	 private String imie;
+	 
 	 public int getIdUzytkownika() {
 		return idUzytkownika;
 	}
@@ -39,8 +42,7 @@ public class Uzytkownik {
 		this.nazwisko = nazwisko;
 	}
 
-	@Column (name= "imie" , nullable= false )  
-	 private String imie;
+
 	 
 
 	
