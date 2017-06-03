@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="hsqldb-2.4.0/hsqldb/doc/verbatim/src"/>
+	<classpathentry kind="src" path="hsqldb-2.4.0/hsqldb/integration/extAuthWithSpring/src"/>
+	<classpathentry kind="src" path="hsqldb-2.4.0/hsqldb/integration/hibernate_3_3_1/src"/>
+	<classpathentry kind="src" path="hsqldb-2.4.0/hsqldb/integration/hibernate/src"/>
+	<classpathentry kind="src" path="hsqldb-2.4.0/hsqldb/src"/>
+	<classpathentry kind="src" path="MicroBlog/src/main/java"/>
+	<classpathentry kind="lib" path="hsqldb-2.4.0/hsqldb/build/gradle-ivyxml-plugin-0.3.2.jar"/>
+	<classpathentry kind="lib" path="hsqldb-2.4.0/hsqldb/build/gradle-javaPropFile-plugin-0.6.0.jar"/>
+	<classpathentry kind="lib" path="hsqldb-2.4.0/hsqldb/build/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="hsqldb-2.4.0/hsqldb/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="hsqldb-2.4.0/hsqldb/lib/sqltool.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

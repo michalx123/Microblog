@@ -7,6 +7,7 @@ CREATE TABLE uzytkownik (
 DROP TABLE follower
 IF EXISTS;
 CREATE TABLE follower (
+  iduzytkownikasledzonego INT,
   imie     VARCHAR(45),
   nazwisko VARCHAR(45)
 );
