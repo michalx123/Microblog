@@ -14,6 +14,9 @@ public class Follower {
 	 @Id   
 	 private int idFollowera;
 	 
+	 @Column (name= "iduzytkownikasledzonego", nullable=false )
+	 private int idUzytkownikaSledzonego;
+	 
 	 @Column (name= "imie" , nullable= false )  
 	 private String imie;
 		 
