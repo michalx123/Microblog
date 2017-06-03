@@ -1,28 +1,8 @@
-/*C3*/SET SCHEMA PUBLIC
-DISCONNECT
 /*C4*/SET SCHEMA PUBLIC
-DELETE FROM FOLLOWER WHERE ID_FOLLOWERA=1
-DELETE FROM FOLLOWER WHERE ID_FOLLOWERA=2
-COMMIT
-drop table follower
-drop table uzytkownik
-drop table wpis
-drop table uzytkownik if exists
-create table uzytkownik (\u000aimie varchar(45),\u000anazwisko varchar(45)\u000a)
-drop table follower if exists
-create table follower (\u000aimie varchar(45),\u000anazwisko varchar(45)\u000a)
-drop table wpis if exists
-create table wpis (\u000atekst varchar(250)\u000a)
-INSERT INTO UZYTKOWNIK VALUES('Jozef','Malinka')
-COMMIT
-INSERT INTO UZYTKOWNIK VALUES('Andrzej','Slodki')
-COMMIT
-INSERT INTO FOLLOWER VALUES('Waldemar','Kiepski')
-COMMIT
-INSERT INTO FOLLOWER VALUES('Marian','Pazdzioch')
-COMMIT
-INSERT INTO WPIS VALUES('Testowy wpis na tablicy')
-COMMIT
-INSERT INTO WPIS VALUES('Czesc i czolem!')
-COMMIT
+DROP TABLE uzytkownik\u000aIF EXISTS
+CREATE TABLE uzytkownik (\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
+DROP TABLE follower\u000aIF EXISTS
+CREATE TABLE follower (\u000a  iduzytkownikasledzonego INT,\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
+DROP TABLE wpis\u000aIF EXISTS
+CREATE TABLE wpis (\u000a  tekst VARCHAR(250)\u000a)
 DISCONNECT
