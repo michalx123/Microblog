@@ -9,6 +9,8 @@ public interface FollowerDao {
 	public void deleteFollowee(int idUzytkownika,int idFollowera);
 	
 	
+	public void checkFollowee(int idUzytkownika);
+	
 	
 
 }
