@@ -6,10 +6,14 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
 
 import pl.wwsis.microblog.dao.WpisDao;
 import pl.wwsis.microblog.model.Wpis;
 
+@Transactional
 public class WpisDaoImpl implements WpisDao{
 
 	@PersistenceContext

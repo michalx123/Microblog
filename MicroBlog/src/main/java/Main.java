@@ -22,6 +22,5 @@ public class Main {
         
         WpisDaoImpl wpis= new WpisDaoImpl();
         System.out.println(wpis.getEverything().size());
-
     }
 }
