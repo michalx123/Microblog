@@ -1,8 +1,8 @@
-/*C4*/SET SCHEMA PUBLIC
+/*C3*/SET SCHEMA PUBLIC
 DROP TABLE uzytkownik\u000aIF EXISTS
 CREATE TABLE uzytkownik (\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
 DROP TABLE follower\u000aIF EXISTS
 CREATE TABLE follower (\u000a  iduzytkownikasledzonego INT,\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
 DROP TABLE wpis\u000aIF EXISTS
-CREATE TABLE wpis (\u000a  tekst VARCHAR(250)\u000a)
+CREATE TABLE wpis (\u000a  iduzytkownika INT,\u000a  tekst VARCHAR(250)\u000a)
 DISCONNECT

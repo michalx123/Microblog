@@ -15,8 +15,20 @@ public class Wpis {
 	 @Column (name= "tekst" , nullable= false )  
 	 private String tekst;
 		
+	@Column (name= "iduzytkownika" , nullable= false )  
+	private int iduzytkownika;
+	 
 	
-	 public int getIdWpisu() {
+	
+	 public int getIduzytkownika() {
+		return iduzytkownika;
+	}
+
+	public void setIduzytkownika(int iduzytkownika) {
+		this.iduzytkownika = iduzytkownika;
+	}
+
+	public int getIdWpisu() {
 		return idWpisu;
 	}
 

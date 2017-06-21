@@ -14,5 +14,6 @@ CREATE TABLE follower (
 DROP TABLE wpis
 IF EXISTS;
 CREATE TABLE wpis (
+  iduzytkownika INT,
   tekst VARCHAR(250)
 );

@@ -13,7 +13,7 @@ public class Main {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World");
             int a = 100 + 10;
-            attributes.put("dodawanie elo", a);
+            attributes.put("dodawanie 123", a);
             return new ModelAndView(attributes, "hello.ftl");
         }, new FreeMarkerEngine());
 
