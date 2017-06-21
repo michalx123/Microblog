@@ -35,7 +35,7 @@ public class WpisDaoImpl implements WpisDao{
 
 	@Override
 	public List<Wpis> getEverything() {
-		Query query = entityManager.createQuery("SELECT * FROM wpis");
+		Query query = entityManager.createQuery("SELECT e FROM wpis e");
 		List<Wpis> wpisy = query.getResultList();
 		return wpisy;
 	}

@@ -4,6 +4,8 @@ import spark.template.freemarker.FreeMarkerEngine;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.wwsis.microblog.dao.impl.WpisDaoImpl;
+
 import static spark.Spark.get;
 
 public class Main {
@@ -14,8 +16,12 @@ public class Main {
             attributes.put("message", "Hello World");
             int a = 100 + 11;
             attributes.put("dodawanie", a);
+            
             return new ModelAndView(attributes, "hello.ftl");
         }, new FreeMarkerEngine());
+        
+        WpisDaoImpl wpis= new WpisDaoImpl();
+        System.out.println(wpis.getEverything().size());
 
     }
 }
