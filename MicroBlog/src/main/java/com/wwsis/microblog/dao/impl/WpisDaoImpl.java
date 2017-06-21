@@ -42,7 +42,7 @@ public class WpisDaoImpl implements WpisDao{
 
 	@Override
 	public void addMessage(int idUzytkownika, String message) {
-		String hql  =  "INSERT INTO wpis (iduzytkownika,tekst)" + "SELECT iduzytkownika, message";
+		String hql  =  "INSERT INTO wpis (iduzytkownika,tekst)" + "SELECT :iduzytkownika, :message";
 		Query query  = entityManager . createQuery ( hql );
 		query.setParameter("iduzytkownika", idUzytkownika);
 		query.setParameter("message", message);
