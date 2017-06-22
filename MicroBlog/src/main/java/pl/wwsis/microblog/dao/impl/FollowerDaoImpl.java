@@ -31,7 +31,7 @@ public class FollowerDaoImpl implements FollowerDao{
 	@Override
 	public void deleteFollowee(int idUzytkownika, int idFollowera) {
 
-		String hql = "DELETE FROM follower WHEREi :idFollowera = duzytkownikasledzonego AND idFollowera = :idFollowera"; 
+		String hql = "DELETE FROM follower WHERE :idFollowera = iduzytkownikasledzonego AND idFollowera = :idFollowera"; 
 		Query query = entityManager.createQuery(hql); 
 		query.setParameter("idUzytkownika",idUzytkownika);
 		query.setParameter("idFollowera",idFollowera);

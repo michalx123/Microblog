@@ -1,8 +1,14 @@
 /*C3*/SET SCHEMA PUBLIC
-DROP TABLE uzytkownik\u000aIF EXISTS
-CREATE TABLE uzytkownik (\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
-DROP TABLE follower\u000aIF EXISTS
-CREATE TABLE follower (\u000a  iduzytkownikasledzonego INT,\u000a  imie     VARCHAR(45),\u000a  nazwisko VARCHAR(45)\u000a)
-DROP TABLE wpis\u000aIF EXISTS
-CREATE TABLE wpis (\u000a  iduzytkownika INT,\u000a  tekst VARCHAR(250)\u000a)
+INSERT INTO UZYTKOWNIK VALUES('Jozef','Malinka')
+COMMIT
+INSERT INTO UZYTKOWNIK VALUES('Andrzej','Slodki')
+COMMIT
+INSERT INTO FOLLOWER VALUES(NULL,'Waldemar','Kiepski')
+COMMIT
+INSERT INTO FOLLOWER VALUES(NULL,'Marian','Pazdzioch')
+COMMIT
+INSERT INTO WPIS VALUES(NULL,'Testowy wpis na tablicy')
+COMMIT
+INSERT INTO WPIS VALUES(NULL,'Czesc i czolem!')
+COMMIT
 DISCONNECT

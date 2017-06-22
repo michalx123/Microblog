@@ -27,14 +27,13 @@ public class WpisDaoImpl implements WpisDao{
 		return wpisy;
 	}
 
-	//do zrobienia
+	
 	@Override
 	public List<Wpis> getAllUsersAndUserFollowersMessages(int idUzytkownika) {
 		Query query = entityManager.createQuery("SELECT tekst FROM wpis W,follower F WHERE W.iduzytkownika=F.iduzytkownikasledzonego OR W.iduzytkownika=:idUzytkownika");
 		List<Wpis> wpisy = query.getResultList();
 		query.setParameter("iUzytkownika", idUzytkownika);
 		return wpisy;
-		
 		
 	}
 
