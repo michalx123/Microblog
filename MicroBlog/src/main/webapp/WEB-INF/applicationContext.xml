@@ -38,6 +38,14 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
+	
+	<bean id="DaoWpis" class="pl.wwsis.microblog.dao.impl.WpisDaoImpl">
+	</bean>
+	<bean id="DaoUzytkownikaoUzytkownik" class="pl.wwsis.microblog.dao.impl.UzytkownikDaoImpl">
+	</bean>
+	<bean id="DaoFollower" class="pl.wwsis.microblog.dao.impl.FollowerDaoImpl">
+	</bean>
+	
 
 
 </beans>
