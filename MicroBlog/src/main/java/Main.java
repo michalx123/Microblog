@@ -20,7 +20,6 @@ public class Main {
             return new ModelAndView(attributes, "hello.ftl");
         }, new FreeMarkerEngine());
         
-        WpisDaoImpl wpis= new WpisDaoImpl();
-        System.out.println(wpis.getEverything().size());
+
     }
 }
