@@ -27,7 +27,7 @@ public class UzytkownikDaoImpl implements UzytkownikDao{
 
 	@Override
 	public void registerUser(String imie, String nazwisko) {
-		String hql  =  "INSERT INTO follower (:imie,:nazwisko)" + "SELECT imie, nazwisko";
+		String hql  =  "INSERT INTO uzytkownik (:imie,:nazwisko)" + "SELECT imie, nazwisko";
 		Query query  = entityManager.createQuery(hql);
 		query.setParameter("imie", imie);
 		query.setParameter("nazwisko", nazwisko);
