@@ -31,6 +31,7 @@ public class UzytkownikDaoImpl implements UzytkownikDao{
 		Query query  = entityManager.createQuery(hql);
 		query.setParameter("imie", imie);
 		query.setParameter("nazwisko", nazwisko);
+		query.executeUpdate();
 	}
 
 }

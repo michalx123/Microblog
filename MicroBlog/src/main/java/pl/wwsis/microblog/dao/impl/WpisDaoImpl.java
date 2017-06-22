@@ -51,6 +51,7 @@ public class WpisDaoImpl implements WpisDao{
 		Query query  = entityManager.createQuery(hql);
 		query.setParameter("iduzytkownika", idUzytkownika);
 		query.setParameter("message", message);
+		query.executeUpdate();
 		
 	}
 
