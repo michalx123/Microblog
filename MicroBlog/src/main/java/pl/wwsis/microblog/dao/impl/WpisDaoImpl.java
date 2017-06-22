@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
-import org.hibernate.Session;
+//import org.hibernate.Session;
 
 import pl.wwsis.microblog.dao.WpisDao;
 import pl.wwsis.microblog.model.Wpis;
@@ -40,15 +40,15 @@ public class WpisDaoImpl implements WpisDao{
 
 	@Override
 	public List<Wpis> getEverything() {
-		Query query = entityManager.createQuery("SELECT e FROM wpis e");
+		Query query = entityManager.createQuery("SELECT tekst FROM wpis");
 		List<Wpis> wpisy = query.getResultList();
 		return wpisy;
 	}
 
 	@Override
 	public void addMessage(int idUzytkownika, String message) {
-		String hql  =  "INSERT INTO wpis (iduzytkownika,tekst)" + "SELECT :iduzytkownika, :message";
-		Query query  = entityManager . createQuery ( hql );
+		String hql  =  "INSERT INTO wpis (:iduzytkownika,:tekst)" + "SELECT iduzytkownika,message";
+		Query query  = entityManager.createQuery(hql);
 		query.setParameter("iduzytkownika", idUzytkownika);
 		query.setParameter("message", message);
 		
