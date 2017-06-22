@@ -1,4 +1,4 @@
-package com.wwsis.microblog.dao.impl;
+package pl.wwsis.microblog.dao.impl;
 
 import java.util.List;
 

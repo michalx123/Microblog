@@ -4,7 +4,7 @@ import spark.template.freemarker.FreeMarkerEngine;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.wwsis.microblog.dao.impl.WpisDaoImpl;
+import pl.wwsis.microblog.dao.impl.WpisDaoImpl;
 
 import static spark.Spark.get;
 
