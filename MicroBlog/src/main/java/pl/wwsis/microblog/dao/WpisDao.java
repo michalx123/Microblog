@@ -14,5 +14,6 @@ public interface WpisDao {
 	
 	public void addMessage(int idUzytkownika,String message);
 	
+
 	
 }

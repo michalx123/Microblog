@@ -17,7 +17,7 @@ import pl.wwsis.microblog.model.Wpis;
 public class WpisDaoImpl implements WpisDao{
 
 	@PersistenceContext
-	EntityManager  entityManager ;
+	EntityManager entityManager;
 	
 	@Override
 	public List<Wpis> getAllUsersMessages(int idUzytkownika) {
